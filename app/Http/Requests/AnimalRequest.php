@@ -24,11 +24,11 @@ class AnimalRequest extends FormRequest
     public function rules()
     {
         return [
-             'name' => 'required|min:3',
+            'name' => 'required|min:3',
             'category' => 'required|min:3',
             'age' => 'required',
             'description' => 'required',
-            'path_img' => 'nullable',
+            'path_img' => 'required',
         ];
     }
 }

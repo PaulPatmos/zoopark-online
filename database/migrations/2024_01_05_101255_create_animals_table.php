@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('age');
             $table->text('description');
-            $table->text('path_img')->nullable();
+            $table->text('path_img');
         });
     }
 

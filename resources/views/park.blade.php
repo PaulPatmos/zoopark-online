@@ -59,22 +59,22 @@
     <div class="col-8">
         <h2>Добавить животное</h2>
         <form action="{{ route('post') }}" method="POST">
+        @csrf
             <div class="row mb-3">
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
-            <divc lass="col-md-6"><input class="form-control" type=“text” value="{{ old('name') }}" id="name" name=“name”></div>
+            <div class="col-md-6"><input class="form-control" type="text" value="{{ old('name') }}" id="name" name="name"></div>
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Категория') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text” value="{{ old('category') }}" id="category" name=“category”></div>
+            <div class="col-md-6"><input class="form-control" type="text" value="{{ old('category') }}" id="category" name="category"></div>
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Возраст') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text” value="{{ old('age') }}"  id="age" name=“age”></div>
+            <div class="col-md-6"><input class="form-control" type="text" value="{{ old('age') }}"  id="age" name="age"></div>
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Описание') }}</label>
-            <div class="col-md-6"><textarea class="form-control" value="{{ old('description') }}" id="description" name=“description”></textarea></div>
+            <div class="col-md-6"><textarea class="form-control" value="{{ old('description') }}" id="description" name="description"></textarea></div>
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Фото') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text” value="{{ old('path_image') }}" id="path_image" name=“path_image”></div>
+            <div class="col-md-6"><input class="form-control" type="text" value="{{ old('path_img') }}" id="path_img" name="path_img"></div>
 
             </div>
             <br>
             <button class="btn btn-primary" role="button" type="submit">Save</button>
-            @csrf
         </form>
     </div>
 </div>

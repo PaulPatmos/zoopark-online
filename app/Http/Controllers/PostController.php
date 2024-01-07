@@ -10,14 +10,24 @@ class PostController extends Controller
 {
     public function Submit(AnimalRequest $req)
     {
-      $body = $req->category;
-      return DB::table('animals')->insert([
-            'name' => $data,
-            'category' =>$data,
-            'age' =>$data,
-            'description' =>$data,
-            'path_img' =>$data,
-           ]);
+      // $body = $req->category;
+      // return DB::table('animals')->insert([
+      //       'name' => $body,
+      //       'category' =>$body,
+      //       'age' =>$body,
+      //       'description' =>$body,
+      //       'path_img' =>$body,
+      //      ]);
+
+
+      $data = [
+        'name' => request('name'),
+        'category' => request('category'),
+        'age' => request('age'),
+        'description' => request('description'),
+        'path_img' => request('path_img'),
+    ];
+    return DB::table('animals')->insert($data);
   
     }
 

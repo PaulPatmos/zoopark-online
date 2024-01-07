@@ -4,9 +4,6 @@
 
 @endsection
 
-<!-- {{ 
-    dump($creatures);
-}} -->
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -47,8 +44,9 @@
 
 <div class="container">
     <div class="col-8">
-        <h1>Животные зоопарка</h1>
- 
+        <h1>Вы зашли не туда ^__^</h1>
+        <p>Возможно вы ввели неправильный адрес и в результате этого вас перебросило сюда</p>
+        <p>Нажмите на "Главная" или логотип, чтобы выйти на главную страницу</p>
     </div>
 </div>
 
@@ -58,9 +56,6 @@
 
 <div class="container">
 <div class="row">
-@foreach($animals as $animal)
-@include('main', compact('animal'))
-@endforeach
 </div>
 </div>
 <!-- Карточки с животными конец -->

@@ -9,6 +9,6 @@
 
   <p class="card-text">Вид: {{ $animal->category }}</p>
   <p class="card-text">Возраст: {{ $animal->age }}</p>
-    <a href="{{ route('category', [$animal->id]) }}" class="btn btn-primary">Смотреть</a>
+    <a href="{{ route('animall', [$animal->id]) }}" class="btn btn-primary">Смотреть</a>
   </div>
 </div>

@@ -18,13 +18,15 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/about', 'MainController@about');
 Route::get('/', 'MainController@index');
-Route::get('/{animal?}', 'MainController@animal')->name('category');
+Route::get('/{animal?}', 'MainController@animal')->name('animall');
+
+// Route::get('/animal', 'MainController@animal')->name('category');
 Route::delete('/delete/animal/{id}','MainController@destroy');
 Route::delete('/animals/{animal}', 'MainController@destroyAnimal')->name('animals.destroy');
 Route::get('/animal', 'MainController@create')->name('animal-create');
 Route::post('/animal', 'MainController@store')->name('animal-store');
 
-Route::get('/post', [PostController::class, 'Submit'])->name('post');
+// Route::get('/post', [PostController::class, 'Submit'])->name('post');
 Route::post('/post', [PostController::class, 'Submit'])->name('post');
 
 Route::get('/create', 'PostController@store');

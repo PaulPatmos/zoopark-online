@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 06 2024 г., 17:26
+-- Время создания: Янв 07 2024 г., 12:52
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -33,8 +33,15 @@ CREATE TABLE `animals` (
   `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `age` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `path_img` text COLLATE utf8mb4_unicode_ci
+  `path_img` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `animals`
+--
+
+INSERT INTO `animals` (`id`, `name`, `category`, `age`, `description`, `path_img`) VALUES
+(1, 'Лимон', 'Попугай', '2', 'Желтый', 'https://osovet64.ru/wp-content/uploads/e/5/f/e5fa6bb67717c56ebe438644a0faa9bd.jpeg');
 
 -- --------------------------------------------------------
 
@@ -75,7 +82,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2019_08_19_000000_create_failed_jobs_table', 1),
 (5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (6, '2024_01_04_164715_create_photos_table', 2),
-(12, '2024_01_05_101255_create_animals_table', 3);
+(19, '2024_01_05_101255_create_animals_table', 3);
 
 -- --------------------------------------------------------
 
@@ -132,6 +139,17 @@ CREATE TABLE `photos` (
   `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `poct`
+--
+
+CREATE TABLE `poct` (
+  `id` bigint UNSIGNED NOT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -226,6 +244,12 @@ ALTER TABLE `photos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `poct`
+--
+ALTER TABLE `poct`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `post`
 --
 ALTER TABLE `post`
@@ -246,7 +270,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -258,7 +282,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -271,6 +295,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `photos`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `poct`
+--
+ALTER TABLE `poct`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `post`

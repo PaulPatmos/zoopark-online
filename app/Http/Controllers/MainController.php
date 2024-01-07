@@ -22,10 +22,20 @@ class MainController extends Controller
         return view( view: 'about');
         
     }
+
     public function animal($id) {
 
         $animal = Animals::where('id', $id)->first();
-        return view('animal', compact('animal'));
+
+        if (!empty($animal)) {
+            return view('animal', compact('animal'));
+        } else {
+            return view( view: 'post');
+            
+        }
+        
+       
+
          
     }
 
