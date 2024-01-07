@@ -91,34 +91,6 @@
 </div>
 @endauth
 
-<hr>
-<div class="container">
-    <div class="col-8">
-        <h2>\-_-/</h2>
-        <form action="/create" method="post">
-        @csrf
-            <div class="row mb-3">
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
-            <divc lass="col-md-6"><input class="form-control" type=“text” id="name" name=“name”></div>
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Категория') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text” id="category" name=“category”></div>
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Возраст') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text”  id="age" name=“age”></div>
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Описание') }}</label>
-            <div class="col-md-6"><textarea class="form-control"  id="description" name=“description”></textarea></div>
-            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Фото') }}</label>
-            <div class="col-md-6"><input class="form-control" type=“text”  id="path_image" name=“path_image”></div>
-
-            </div>
-            <br>
-            <button class="btn btn-primary" type="submit">Save</button>
-            
-        </form>
-    </div>
-</div>
-<hr>
-
-
 <!-- Карточки с животными -->
 
 <div class="container">
